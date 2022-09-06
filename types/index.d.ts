@@ -300,6 +300,7 @@ export interface IntrospectionResponse {
 
 export interface ClientOptions {
   additionalAuthorizedParties?: string | string[];
+  signingOperation?: (payload: Object, alg: string) => string;
 }
 
 export type Client = InstanceType<Issuer['Client']>;
